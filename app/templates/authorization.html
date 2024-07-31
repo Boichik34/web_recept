@@ -1,0 +1,22 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title%}
+    Aторизация
+{% endblock%}
+
+{% block body%}
+   <body class="container  bg-body-tertiary">
+ <main class="d-flex justify-content-center">
+  <form class="container" method="post">
+      {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 fw-normal">Пожалуйста авторизируйтесь</h1>
+    <p>{{form.name.label()}}{{ form.name()}}
+    <p>{{form.email.label()}}{{ form.email()}}
+    <p> {{form.password.label()}}{{ form.password()}}
+    <p>{{form.remember.label()}}{{ form.remember()}}
+      <p>{{ form.submit()}}
+
+{% endblock%}

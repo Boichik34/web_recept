@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Редактирование рецепта
+{% endblock%}
+
+{% block body%}
+<div class="container mt-5">
+    <form method="post">
+      <input type='text' id="name" name="name" class="form-control" required placeholder="Введите название рецепта" value="{{recept.name}}"><br>
+      <select class="form-control" name="category" required title="Категория">
+          <option disabled >Выберите категорию</option>
+          <option value="Завтрак">Завтрак</option>
+          <option value="Обед" >Обед</option>
+          <option value="Ужин">Ужин</option>
+          <option value="Десерт">Десерт</option>
+      </select><br>
+      <input type='text' id="Ingredients" name="Ingredients" class="form-control" required placeholder="Введите ингридиенты" value="{{recept.ingredients}}"><br>
+      <input type='text' id="steps" name="steps" class="form-control" required placeholder="Введите шаги приготовления" value="{{recept.recept}}"><br>
+      <input type='number' id="time" name="time" class="form-control" required placeholder="Введите время приготовления в минутах" value="{{recept.time}}"><br>
+      <button type="submit" class="btn btn-success">Редактировать</button>
+
+    </form>
+</div>
+
+{% endblock%}

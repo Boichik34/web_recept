@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title%}
+    Книга рецептов
+{% endblock%}
+
+{% block body%}
+<div class="container mt-5">
+     <h1>Результат</h1>
+    {% if recipes%}
+       {% for item in recipes %}
+         <div class="alert alert-info">
+       <h3>{{item.name}}</h3>
+        <h4>Время приготовления: {{item.time}} мин.</h4>
+        <a href="/profile/{{item.id}}/info" class="btn btn-success">Подробнее</a>
+        <a href="/profile/{{item.id}}/change" class="btn btn-warning">Редактировать</a>
+        <a href="/profile/{{item.id}}/delite" class="btn btn-danger">Удалить</a>
+         </div>
+
+
+
+        {% endfor %}
+    {% else %}
+    <div class="alert alert-danger">
+    <h3>Поиск не дал результатов</h3>
+          </div>
+    {% endif %}
+    <a href="{{url_for('profile')}}" class="btn btn-success">Назад</a>
+</div>
+{% endblock%}

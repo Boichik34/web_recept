@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+{{recept.name}}
+{% endblock%}
+
+{% block body%}
+<div class="container mt-5">
+     <div class="alert alert-info">
+     <h1>{{recept.name}}</h1>
+         <h3>Категория: {{recept.category}}</h3>
+         <h3>Время приготовления: {{recept.time}} мин.</h3>
+         <h3>Ингридиэнты: {{recept.ingredients}}</h3>
+         <h3>{{recept.recept}}</h3>
+
+        <a href="{{url_for('profile')}}" class="btn btn-success">Назад</a>
+
+     </div>
+</div>
+{% endblock%}
+
+
+

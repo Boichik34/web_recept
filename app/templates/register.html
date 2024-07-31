@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block title%}
+    Регистрация
+{% endblock%}
+
+{% block body%}
+   <body class="">
+ <main class="d-flex justify-content-center">
+  <form class="form-group" method="post">
+      {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 fw-normal">Пожалуйста зарегистрируйся</h1>
+    <p>{{form.name.label()}}{{ form.name()}}
+    <p>{{form.email.label()}}{{ form.email()}}
+    <p> {{form.password.label()}}{{ form.password()}}
+      <p>{{ form.submit()}}
+      </form>
+ </main>
+   </body>
+{% endblock%}

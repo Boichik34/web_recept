@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title%}
+   Выбор рецепта
+{% endblock%}
+
+{% block body%}
+<div class="container mt-5">
+    <form method="post">
+
+      <select class="form-control"  name="category" title="Категория">
+          <option disabled selected>Выберите категорию</option>
+          <option value="Завтрак">Завтрак</option>
+          <option value="Обед" >Обед</option>
+          <option value="Ужин">Ужин</option>
+          <option value="Десерт">Десерт</option>
+      </select><br>
+
+      <button type="submit" name="category" class="btn btn-success">Найти рецепты по категории</button><br><br>
+
+     <input type='text' id="name"  name="name" class="form-control" placeholder="Введите ключевое слово"><br>
+
+      <button type="submit" name="name" class="btn btn-success">Найти рецепты по ключевому слову</button>
+
+
+
+
+    </form>
+</div>
+
+{% endblock%}
